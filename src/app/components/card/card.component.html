@@ -1,0 +1,33 @@
+<body>
+    <header>
+        <h3>800 <b>Pokemons</b> for you choose your favorite</h3>
+        <div class="search">
+            <label for="searchPoke"></label>
+            <input id="searchPoke" placeholder="Find your Pokemon">
+
+            <select name="type" id="type">
+                <option value="Fire">Fire</option>
+                <option value="Normal">Normal</option>
+                <option value="Electric">Electric</option>
+                <option value="Water">Water</option>
+            </select>
+        </div>
+    </header>
+
+    <main>
+
+        <div class="cards">
+            <app-card-model pokeName="pikachu" [attackPower]="49" [defensePower]="49" primaryType="grass"
+                secondaryType="poison" cardModel="primary"></app-card-model>
+            <app-card-model pokeName="pikachu" [attackPower]="49" [defensePower]="37" primaryType="grass"
+                secondaryType="water" cardModel="primary"></app-card-model>
+            <app-card-model pokeName="pikachu" [attackPower]="49" [defensePower]="52" primaryType="grass"
+                secondaryType="poison" cardModel="primary"></app-card-model>
+            <app-card-model pokeName="pikachu" [attackPower]="49" [defensePower]="50" primaryType="grass"
+                secondaryType="fire" cardModel="primary"></app-card-model>
+
+
+        </div>
+
+    </main>
+</body>

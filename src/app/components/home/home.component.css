@@ -1,0 +1,87 @@
+main {
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: rgb(198, 184, 31);
+    background: linear-gradient(0deg, rgba(198, 184, 31, 1) 0%, rgba(253, 253, 45, 1) 100%);
+    color: #1D1E1D;
+}
+
+nav {
+    display: flex;
+    position: fixed;
+    margin-bottom: 2rem;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 1.5rem 10rem 1.5rem 10rem;
+    box-shadow: rgba(50, 50, 93, 0.20) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 8px -8px;
+    background: rgb(252, 235, 57)
+}
+
+.logoImg {
+    display: flex;
+    width: 100%;
+}
+
+.navText {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.navText a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    gap: 3rem;
+    overflow: hidden;
+}
+
+.cta {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 28rem;
+    gap: 3rem;
+}
+
+.cta h1 {
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    font-size: 3rem;
+}
+
+.tools {
+    justify-content: left;
+
+}
+
+.cta button {
+    background-color: #73D677;
+    border: 0;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    padding: .75rem;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 700;
+    width: 14.5rem;
+}
+
+.container img {
+    position: static;
+}
