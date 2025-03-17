@@ -1,9 +1,9 @@
 <body>
     <header>
         <h3>800 <b>Pokemons</b> for you choose your favorite</h3>
-        <div class="search">
+        <form class="search" type="submit">
             <label for="searchPoke"></label>
-            <input id="searchPoke" placeholder="Find your Pokemon">
+            <input id="searchPoke" placeholder="Find your Pokemon" (input)="atualizarValorinput($event)">
 
             <select name="type" id="type">
                 <option value="Fire">Fire</option>
@@ -11,22 +11,47 @@
                 <option value="Electric">Electric</option>
                 <option value="Water">Water</option>
             </select>
-        </div>
+
+            <button (click)="getPokeInfo($event)">Search</button>
+        </form>
     </header>
 
     <main>
-
         <div class="cards">
-            <app-card-model pokeName="pikachu" [attackPower]="49" [defensePower]="49" primaryType="grass"
-                secondaryType="poison" cardModel="primary"></app-card-model>
-            <app-card-model pokeName="pikachu" [attackPower]="49" [defensePower]="37" primaryType="grass"
-                secondaryType="water" cardModel="primary"></app-card-model>
-            <app-card-model pokeName="pikachu" [attackPower]="49" [defensePower]="52" primaryType="grass"
-                secondaryType="poison" cardModel="primary"></app-card-model>
-            <app-card-model pokeName="pikachu" [attackPower]="49" [defensePower]="50" primaryType="grass"
-                secondaryType="fire" cardModel="primary"></app-card-model>
+            <!-- *ngFor="let pokemon of pokee" -->
 
 
+            <div class="cardContainer" [class]="cardModel">
+                <div class="cardText">
+                    <div class="title">
+                        <span [attr.pokeName]="">{{pokee.name}}</span>
+                    </div>
+                    <div class="ability">
+                        <div class="attack">
+                            <span [attr.weight]="weight">{{pokee.weight}}</span>
+                            <span>weight</span>
+                        </div>
+                        <div class="defense">
+                            <span [attr.height]="height">{{pokee.height}}</span>
+                            <span>height</span>
+                        </div>
+                    </div>
+                    <div class="types">
+                        <div class="type">
+
+                            <span *ngFor="let type of pokee.types"
+                                [attr.primaryType]="type.type.name">{{type.type.name}}</span>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="pokeImg">
+
+                    <img src="../../../assets/pokeimg.svg">
+                    <ng-content></ng-content>
+                </div>
+            </div>
         </div>
 
     </main>

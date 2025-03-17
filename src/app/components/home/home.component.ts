@@ -12,25 +12,6 @@ import { Component, OnInit } from '@angular/core';
   providers: [PokeDataService]
 })
 
-export class HomeComponent implements OnInit {
+export class HomeComponent {
 
-
-  poke: any;
-  url = 'https://pokeapi.co/api/v2/pokemon';
-
-  constructor(private srv: PokeDataService) { }
-  getPoke(): void {
-
-    this.srv.getData(this.url).subscribe(
-      (data) => {
-        this.poke = data;
-        console.log(data.results)
-      }
-    )
-
-  };
-
-  ngOnInit() {
-    this.getPoke()
-  }
 }

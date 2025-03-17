@@ -8,10 +8,11 @@ import { Observable } from 'rxjs';
 
 })
 export class PokeDataService {
+  private apiUrl = 'https://pokeapi.co/api/v2/pokemon'
 
   constructor(private http: HttpClient) { }
 
-  getData(url: string): Observable<any> {
-    return this.http.get<any>(url)
+  getData(pokemon: string): Observable<any> {
+    return this.http.get<any>(`${this.apiUrl}/${pokemon}`)
   }
 }

@@ -9,10 +9,7 @@ import { Component, Input } from '@angular/core';
 })
 
 export class CardModelComponent {
-  @Input() pokeName?: string;
-  @Input() attackPower?: number;
-  @Input() primaryType?: string;
-  @Input() secondaryType?: string;
-  @Input() defensePower?: number;
-  @Input() cardModel?: 'primary';
+
+
+
 }
