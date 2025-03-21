@@ -15,31 +15,29 @@
             <button (click)="getPokeInfo($event)">Search</button>
         </form>
     </header>
-
     <main>
         <div class="cards">
-            <!-- *ngFor="let pokemon of pokee" -->
 
 
-            <div class="cardContainer" [class]="cardModel">
+            <div class="cardContainer" *ngFor="let pokemon of pokemons">
                 <div class="cardText">
                     <div class="title">
-                        <span [attr.pokeName]="">{{pokee.name}}</span>
+                        <span [attr.pokeName]="">{{pokemon.pokeName}}</span>
                     </div>
                     <div class="ability">
                         <div class="attack">
-                            <span [attr.weight]="weight">{{pokee.weight}}</span>
+                            <span [attr.weight]="weight">{{pokemon.weight}}</span>
                             <span>weight</span>
                         </div>
                         <div class="defense">
-                            <span [attr.height]="height">{{pokee.height}}</span>
+                            <span [attr.height]="height">{{pokemon.height}}</span>
                             <span>height</span>
                         </div>
                     </div>
                     <div class="types">
                         <div class="type">
 
-                            <span *ngFor="let type of pokee.types"
+                            <span *ngFor="let type of pokemon.types"
                                 [attr.primaryType]="type.type.name">{{type.type.name}}</span>
 
                         </div>
@@ -48,7 +46,7 @@
                 </div>
                 <div class="pokeImg">
 
-                    <img src="../../../assets/pokeimg.svg">
+                    <img [src]="pokemon.image" alt="pokemon.pokeName">
                     <ng-content></ng-content>
                 </div>
             </div>
